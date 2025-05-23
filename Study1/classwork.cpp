@@ -1,9 +1,14 @@
 ﻿// classwork.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 #include <iostream>
+#include <nlohmann/json.hpp>
+
 #include "class student.h"
 #include "studentWriteToFile.h"
 
+
+#include "Fraction.h"
+#include "FractionFileManager.h"
 using namespace std;
 /*
 Потоки
@@ -23,5 +28,12 @@ int main()
 	StudentFileManager::readFromFile(filename, student2); // Загрузка данных из файла
 	student2.PrintStudent(); // Вывод данных на экран
 
+	cout << "-------------------------------------" << endl;
+	Fraction f(3, 4);
+	FractionFileManagerJs::writeToFile("fraction.json", f);
+
+	Fraction loaded(0, 1);
+	FractionFileManagerJs::readFromFile("fraction.json", loaded);
+	loaded.print(); // Вывод данных на экран
 	return 0;
 }

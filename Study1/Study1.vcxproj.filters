@@ -13,24 +13,42 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\NewFilter1">
+      <UniqueIdentifier>{876d9893-6bdf-4c7a-9c38-552b0d092ef9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="classwork.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="class student.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
     <ClCompile Include="studentWriteToFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Fraction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="class student.cpp">
+      <Filter>Header Files\NewFilter1</Filter>
+    </ClCompile>
+    <ClCompile Include="FractionFileManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="class student.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="studentWriteToFile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Fraction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="class student.h">
+      <Filter>Header Files\NewFilter1</Filter>
+    </ClInclude>
+    <ClInclude Include="FractionFileManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

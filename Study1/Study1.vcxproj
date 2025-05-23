@@ -129,13 +129,27 @@
   <ItemGroup>
     <ClCompile Include="class student.cpp" />
     <ClCompile Include="classwork.cpp" />
+    <ClCompile Include="Fraction.cpp" />
+    <ClCompile Include="FractionFileManager.cpp" />
     <ClCompile Include="studentWriteToFile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class student.h" />
+    <ClInclude Include="Fraction.h" />
+    <ClInclude Include="FractionFileManager.h" />
     <ClInclude Include="studentWriteToFile.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\Nlohmann-JSON.3.8.0\build\native\Nlohmann-JSON.targets" Condition="Exists('..\packages\Nlohmann-JSON.3.8.0\build\native\Nlohmann-JSON.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Nlohmann-JSON.3.8.0\build\native\Nlohmann-JSON.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Nlohmann-JSON.3.8.0\build\native\Nlohmann-JSON.targets'))" />
+  </Target>
 </Project>
